@@ -109,6 +109,7 @@ ul{
     color: var(--text-color);
     font-size: 0.9rem;
     margin: 2rem 0;
+    line-height: 2rem;
 }
 
 .section{
@@ -136,6 +137,9 @@ ul{
     letter-spacing: 0.4px;
     text-transform: capitalize;
     transition: .3s;
+    min-width: 125px;
+    text-align: center;
+
 
  }
  .btn:hover{
@@ -152,6 +156,7 @@ ul{
     border-bottom: 2.5px solid var(--main-color-2);
     border-radius: 0px;
     padding: 0.15rem 0;
+    min-width: revert;
  }
 .btn.secondary-btn::before{
     content: "";
@@ -273,7 +278,7 @@ header.scrolled .logo{
     overflow: hidden;
     transition: .3s;
     position: relative;
-    background-color: red;
+    
 
 
 }
@@ -446,43 +451,205 @@ header.scrolled .logo{
 
 }
 
+.skills{
+    overflow: hidden;
+}
+.skills-box{
+    background-color: var(--bg-color-2);
+    padding: 5rem 6rem;
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+
+}
+.box-desc{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    margin: 2rem;
+    justify-content: space-between;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.sk-progress{
+    width: 150px;
+    height: 150px;
+    position: relative;
+  
+}
+.sk-progress svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg)
+
+   
+}
+.sk-progress svg circle {
+    fill: var(--bg-color-3);
+    stroke-width: 5px;
+    stroke: var(--main-color-1);
+    stroke-linecap: round;
+    stroke-dasharray: 427;
+    stroke-dashoffset: 426;
+
+}
+@keyframes progress {
+    to{
+        stroke-dashoffset: var(--target);
+    }
+}
+
+.counter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    color: var(--heading-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.counter span {
+    font-size: 2.45rem;
+
+}
+.sk-title{
+    color: var(--heading-color);
+    margin-top: 0.75rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.skills .dots{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.skills .square{
+    position: absolute;
+    left: 100%;
+    top: 75%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+/* ------------------------- Sevices Section Styling -------------------------- */
 
 
+.services .container{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+  
+    column-gap: 6rem;
+    align-items: center;
+}
 
+.milestones{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    text-align: center;
+    justify-items: flex-start;
+}
 
+.milestones h2{
+    color: var(--main-color-1);
+    font-size: 1.3rem;
 
+}
+.milestones h2 span{
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-right: 0.1rem;
+}
+.milestones h5 {
+    color:  var(--heading-color);
+    line-height: .9;
+    font-weight: 500;
+    font-size: .95;
+    
+}
 
+.services-grid{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 4.4rem;
+   
+}
 
+.srv-card{
+    background-color: var(--bg-color-2);
+    border-radius: 15px;
+    padding: 2.5rem 2.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 280px;;
+}
+.srv-card h3 {
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: 1.05rem;
 
+}
+.srv-card text{
+    margin: .7rem 0;
+    font-size: .7rem;
 
+}
+.srv-card:nth-child(2){
+    transform:  translateY(2.2rem);
+}
+.srv-card:nth-child(3){
+    transform:  translateY(-2.2rem);
+}
+.services-grid::after{
+    content: "";
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    border: 15px solid var(--main-color-1);
+    z-index: -1;
+    opacity: 0.07;
+}
 
+.services  .triangle{
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    transform: translate(-50%,-100%);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.services .square{
+   
+    top: 75%;
+    left: -15px;
+    position: absolute;
+    transform: translate(-50%,-100%);
+    z-index: -1;
+}
