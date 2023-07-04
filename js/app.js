@@ -113,3 +113,6 @@ function mlCounter(){
   });
    
 }
+/* ------------------------- Porfolio Filter Animationr -------------------------- */
+
+let mixer = mixitup('.portfolio-gallery');

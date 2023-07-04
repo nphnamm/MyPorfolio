@@ -653,3 +653,129 @@ header.scrolled .logo{
     transform: translate(-50%,-100%);
     z-index: -1;
 }
+
+.portfolio-header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.portfolio-title {
+    padding-bottom: 1rem;
+
+}
+.filter-btn{
+    display: inline-block;
+    color: var(--heading-color);
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    font-family: inherit;
+    text-transform: uppercase;
+    margin-left: 1.3rem;
+
+
+}
+.portfolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 2rem;
+
+}
+.prt-card{
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bg-color-2);
+    height: 265px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+}
+.prt-image{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* background-color: red; */
+
+}
+.prt-image:hover .prt-overlay{
+    pointer-events: auto    ;
+    background-color: var(--bg-color-transparent);
+    backdrop-filter: blur(10px);
+
+}
+.prt-image img{
+    width:100%;
+}
+.prt-desc{
+    padding: 1.1rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.prt-desc h3{
+    font-size: 0.95rem;
+    color: var(--heading-color);
+    font-weight: 600;
+    text-transform: capitalize;
+     
+}
+.btn.secondary-btn .sm {
+    padding:0.07rem 0.1rem;
+    font-size: 0.78rem;
+    border-bottom-width:2px;
+}
+
+.btn.secondary-btn .sm::before {
+    height: 2px;
+    bottom: -2px;
+
+}
+.prt-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.5s;
+    
+}
+.prt-icon{
+    color:hsl(var(--hue-1),61%,24%);
+    font-size: 1.1rem;
+    margin: 0 0.4rem;
+    background-color: var(--main-color-2);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transform: translateY(15px);
+    justify-content: center;
+    transition: 0.3s;
+    opacity: 0;
+
+}
+.prt-icon:hover{
+    background-color: var(--main-color-dark2);
+}
+.prt-image:hover .prt-icon{
+    opacity: 1;
+    transform: translateY(0x);
+    transition: 0.3s var(--i);
+
+}
