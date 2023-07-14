@@ -130,33 +130,32 @@ let mixer = mixitup('.portfolio-gallery',{
   }
 });
 
-/* ------------------------- Modal Pop Up Animation -------------------------- */
 let currentIndex =0;
 
 zoom_icons.forEach((icn ,i) => 
-  icn.addEventListener("click" ,() =>{
+icn.addEventListener("click" ,() =>{
   prt_section.classList.add("open");  
   document.body.classList.add("stopScrolling");
   currentIndex = i;
   changeImage(currentIndex);
-  })
+})
 );
 
 modal_overlay.addEventListener("click", () =>{
   prt_section.classList.remove("open")
   document.body.classList.remove("stopScrolling");
-  }
+}
 );
 prev_btn.addEventListener("click", () =>{
   if(currentIndex === 0){
     currentIndex = 5;
-
+    
   }else if(currentIndex === 6){
     currentIndex =0;
   }
   else{
     currentIndex --;
-
+    
   }
   
   changeImage(currentIndex);
@@ -167,12 +166,26 @@ next_btn.addEventListener("click", () =>{
   }
   else{
     currentIndex ++;
-
+    
   }
- 
+  
   changeImage(currentIndex);
 })
 function changeImage(index){
   images.forEach((img) => img.classList.remove("showImage"))
   images[index].classList.add("showImage");
 };
+
+/* ------------------------- Modal Pop Up Animation -------------------------- */
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  speed: 500,
+  autoplay:true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+});
