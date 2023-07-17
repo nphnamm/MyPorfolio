@@ -15,10 +15,10 @@ const modal_overlay = document.querySelector(".modal-overlay")
 const images = document.querySelectorAll(".images img");
 const prev_btn = document.querySelector(".prev-btn");
 const next_btn = document.querySelector(".next-btn");
-
+const links = document.querySelectorAll(".nav-link");
      
       window.addEventListener("scroll", ()=>{
-    
+        activeLink();
         if(!skillsPlayed) skillsCounter();
         if(!mlPlayed) mlCounter();
     
@@ -73,13 +73,13 @@ const next_btn = document.querySelector(".next-btn");
       function skillsCounter(){
       
         if(!hasReached(first_skill)){
-          console.log("you reached skill counter")
+          // console.log("you reached skill counter")
           
           return ;
 
         } 
         
-        console.log("you reached skill counter1")
+        // console.log("you reached skill counter1")
         skillsPlayed = true;
        
         sk_counters.forEach((counter, i)=>{
@@ -105,7 +105,7 @@ function mlCounter(){
   if(!hasReached(ml_section)) return;
   mlPlayed = true;
 
-  console.log("you've reached ml section");
+  // /console.log("you've reached ml section");
   ml_counters.forEach((ctr) => {
     
     let target = +ctr.dataset.target;
@@ -113,7 +113,7 @@ function mlCounter(){
       updateCount(ctr,target);
       
     },400);
-    console.log(ctr);
+    // console.log(ctr);
   });
    
 }
@@ -189,3 +189,24 @@ const swiper = new Swiper('.swiper', {
     clickable:true,
   },
 });
+
+/* ------------------------- Change active link on scroll -------------------------- */
+
+function activeLink(){
+    let sections = document.querySelectorAll("section[id]");
+    let passedSections = Array.from(sections).map((sct ,i) =>{
+      // console.log(sct.getBoundingClientRect().top - header.offsetHeight);
+
+        return {
+          x: header.offsetHeight,
+          y: sct.getBoundingClientRect().top - header.offsetHeight,
+          id :i,
+        };
+      }).filter((sct) => sct.y <=0);
+
+    let currSectionID = passedSections.at(-1).id;
+      
+    links.forEach(l => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
+    
+}
