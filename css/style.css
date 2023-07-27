@@ -1480,5 +1480,214 @@ footer .social-media {
         border-radius: 40px;
         
     }
-     
-}
+    .showcase-info{
+        width: 100%;
+        justify-items: self-start;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .showcase-area .text{
+        margin: 0.2rem 0;
+
+    }
+    .cta{
+        margin-top: 1rem;
+        
+    }
+    .showcase-area .circle{
+        width: 120px;
+
+    }
+    .showcase-area .square{
+        left:80%;
+        top: 20%;
+
+
+    }
+    .about .container{
+        grid-template-columns: 1fr;
+
+    }
+    .about-grid{
+        order:3;
+    }
+    .heading br{
+        display: none;
+    }
+    .about .text{
+        margin: 1rem 0 1.5rem;
+
+    }
+    .about-grid{
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 150px 150px;
+        margin: 2.5rem 0 0 0;
+        column-gap: 2rem;
+        row-gap: 80px;
+
+
+    }
+    .icon{
+        width: 50px;
+
+    }
+    .about-card h3{
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+
+    }
+    .about-grid::after{
+        width: 150px;
+        height: 150px;
+        border-width: 10px;
+        
+
+    }
+    .box-desc{
+        grid-template-columns: 1fr;
+        justify-items: flex-start;
+
+
+    }
+    .skills-wrap{
+        grid-template-columns: repeat(2,150px);
+        row-gap: 1rem;
+        margin: 3rem;
+        
+
+    }
+    .sk-title{
+        margin-top: 0;
+    }
+    .services .container{
+        grid-template-columns: 1fr ;
+        justify-items: center;
+    }
+    .services .text{
+        margin: 1.5rem 0 0.5rem;
+
+    }
+    .services-grid{
+        margin-top: 3.5rem;
+        column-gap: 1.5rem;
+        row-gap: 3.5rem;
+        max-width: 600px;
+
+
+
+    }
+    .srv-card{
+        padding: 1.8rem 1.7rem;
+        min-height: 260px;
+
+    }
+    .srv-card h3{
+        font-size: .9rem;
+
+    }
+    .srv-card text{
+        font-size: 0.4rem 0 0.8rem;
+    }
+
+    .portfolio-title{
+        padding-bottom: 0;
+
+    }
+    .testimonials{
+        padding: var(--section-padding) 0;
+
+    }
+    .testimonials .container{
+        position: revert;
+        grid-template-columns: 1fr;
+        max-width: 620px;
+
+    }
+    .section-background{
+        transform: translateX(0);
+        left: 0;
+        border-radius: 0;
+        top: 0;
+        height: 100%;
+        background-image: linear-gradient(45deg,
+        var(--main-color-2) 17%,
+        var(--main-color-1) 17%
+        
+        );
+
+    }
+    .section-background .person,
+    .section-background .circle{
+        display: none;
+
+    }
+    .swiper{
+        order: 2;
+        padding: 2rem 0;
+
+
+    }
+    .testimonials-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 0 3rem 0 ;
+    }
+    .swiper-slide{
+        padding: 0 2rem;
+
+    }
+    .swiper-slide .text{
+        margin: 1rem 0 0;
+
+
+    }
+    .swiper-pagination{
+        margin-top: 3rem;
+
+    }
+    .client{
+        grid-template-columns: 65px 1fr;
+        
+
+    }
+    .client-info h4{
+        margin-bottom: 0.2rem;
+        font-size: 0.97rem;
+
+    }
+    .client-info h5{
+        font-size: 0.7rem;
+
+    }
+    .section-backgroun .square{
+        left: 86%;
+        top: 12%;
+        width: 60px;
+    }
+    .contact .container{
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+
+    }
+    .contact .square{
+        width: 60px;
+        bottom: 68%;
+        left: 75%;
+
+    }
+    .contact .triangle{
+        left: 20%;
+        top: 101%;
+
+    }
+    .sub-box{
+        grid-template-columns: 1fr ;
+        row-gap: 2rem;
+
+    }
+}   
+

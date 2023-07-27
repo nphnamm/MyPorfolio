@@ -186,7 +186,7 @@ function changeImage(index){
 const swiper = new Swiper('.swiper', {
   loop: true,
   speed: 500,
-  autoplay:true,
+  autoplay:false,
 
   // If we need pagination
   pagination: {
