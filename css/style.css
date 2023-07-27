@@ -1689,5 +1689,128 @@ footer .social-media {
         row-gap: 2rem;
 
     }
+    .sub-box .heading{
+        margin-top: 0rem;
+
+    }
+    .subscription .square{
+        width: 60px;
+        left: 65%;
+        bottom: 25%;
+        /* z-index: -1; */
+    }
 }   
 
+/* -------------- 500px Screens------------------ */
+
+@media(max-width: 500px){
+    .container{
+        padding: 0 1rem;
+    }
+    .showcase-area .square{
+        display: none;
+
+    }
+    .showcase-area .container{
+        row-gap: 4.5rem;
+    }
+    .showcase-area .heading{
+        font-size: 2.4rem;
+
+    }
+    .skills-box{
+        padding: 3rem 2.5rem;
+
+    }
+    .skills-wrap{
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+
+    }
+    .services-grid{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+    }
+    .srv-card{
+        transform: none !important;
+        min-height: auto;
+
+    }
+    .portfolio-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .portfolio-tilte{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filter-btn{
+        margin-top: 1rem;
+    }
+    .portfolio .slider-wrap{
+        width: calc((100% -2rem));
+        grid-template-columns: 25px 1fr 25px;
+    }
+    .images{
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    .prev-btn{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        z-index: 1;
+        color:#333;
+
+    }
+    .next-btn{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        z-index: 1;
+        color:#333;
+
+    }
+    .contact-form p{
+        font-size: 1.2rem;
+
+    }
+    .subscription .square{
+        display:none
+
+    }
+    .subscription form{
+        grid-template-columns: 1fr;
+        row-gap: 10px;
+        justify-items: center;
+    }
+    .sub-box {
+        padding: 3rem 2.2rem;
+        row-gap: 0.5rem;
+
+    }
+    .sub-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+    .sub-box .heading{
+        font-size: 1.7rem;
+
+    }
+    footer{
+        padding: var(--section-padding) 0 1rem;
+
+    }
+    footer .text{
+        order: 3;
+        flex-basis: 100%;
+        text-align: center;
+        margin-top: 1rem;
+        
+    }
+}
